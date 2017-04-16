@@ -1,4 +1,110 @@
-<!doctype html><html class="theme-next pisces use-motion" lang=zh-Hans><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1"><meta http-equiv=Cache-Control content=no-transform><meta http-equiv=Cache-Control content=no-siteapp><link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel=stylesheet type=text/css><link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel=stylesheet type=text/css><link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel=stylesheet type=text/css><link href="/css/main.css?v=5.1.0" rel=stylesheet type=text/css><meta name=keywords content="Hexo, NexT"><link rel="shortcut icon" type=image/x-icon href="/favicon.ico?v=5.1.0"><meta name=description content="移动端真机调试IOS 移动端 原生方法（Safari开发者工具） 手机端：设置 → Safari → 高级 → Web 检查器 → 开。 mac端：Safari → 偏好设置 → 高级 → 在菜单栏中显示“开发”菜单 安卓移动端原生方法 首先确保手机上和PC机上装有最新版本的chrome浏览器。http://www.cnblogs.com/meitian/p/5030978.html 手机用数据"><meta name=keywords><meta property=og:type content=article><meta property=og:title content=页面调试经验总结><meta property=og:url content=http://yoursite.com/2016/05/14/页面调试经验总结/index.html><meta property=og:site_name content=treasureling个人博客><meta property=og:description content="移动端真机调试IOS 移动端 原生方法（Safari开发者工具） 手机端：设置 → Safari → 高级 → Web 检查器 → 开。 mac端：Safari → 偏好设置 → 高级 → 在菜单栏中显示“开发”菜单 安卓移动端原生方法 首先确保手机上和PC机上装有最新版本的chrome浏览器。http://www.cnblogs.com/meitian/p/5030978.html 手机用数据"><meta property=og:image content=http://images2015.cnblogs.com/blog/626983/201512/626983-20151208205701574-332125502.png><meta property=og:image content=http://jiangshui.b0.upaiyun.com/blog/2014/12/mobile-test9.png><meta property=og:updated_time content=2017-04-15T14:09:15.000Z><meta name=twitter:card content=summary><meta name=twitter:title content=页面调试经验总结><meta name=twitter:description content="移动端真机调试IOS 移动端 原生方法（Safari开发者工具） 手机端：设置 → Safari → 高级 → Web 检查器 → 开。 mac端：Safari → 偏好设置 → 高级 → 在菜单栏中显示“开发”菜单 安卓移动端原生方法 首先确保手机上和PC机上装有最新版本的chrome浏览器。http://www.cnblogs.com/meitian/p/5030978.html 手机用数据"><meta name=twitter:image content=http://images2015.cnblogs.com/blog/626983/201512/626983-20151208205701574-332125502.png><script type=text/javascript id=hexo.configurations>
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="移动端真机调试IOS 移动端 原生方法（Safari开发者工具） 手机端：设置 → Safari → 高级 → Web 检查器 → 开。 mac端：Safari → 偏好设置 → 高级 → 在菜单栏中显示“开发”菜单  安卓移动端原生方法 首先确保手机上和PC机上装有最新版本的chrome浏览器。http://www.cnblogs.com/meitian/p/5030978.html 手机用数据">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="页面调试经验总结">
+<meta property="og:url" content="http://yoursite.com/2016/05/14/页面调试经验总结/index.html">
+<meta property="og:site_name" content="treasureling个人博客">
+<meta property="og:description" content="移动端真机调试IOS 移动端 原生方法（Safari开发者工具） 手机端：设置 → Safari → 高级 → Web 检查器 → 开。 mac端：Safari → 偏好设置 → 高级 → 在菜单栏中显示“开发”菜单  安卓移动端原生方法 首先确保手机上和PC机上装有最新版本的chrome浏览器。http://www.cnblogs.com/meitian/p/5030978.html 手机用数据">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/626983/201512/626983-20151208205701574-332125502.png">
+<meta property="og:image" content="http://jiangshui.b0.upaiyun.com/blog/2014/12/mobile-test9.png">
+<meta property="og:updated_time" content="2017-04-15T14:09:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="页面调试经验总结">
+<meta name="twitter:description" content="移动端真机调试IOS 移动端 原生方法（Safari开发者工具） 手机端：设置 → Safari → 高级 → Web 检查器 → 开。 mac端：Safari → 偏好设置 → 高级 → 在菜单栏中显示“开发”菜单  安卓移动端原生方法 首先确保手机上和PC机上装有最新版本的chrome浏览器。http://www.cnblogs.com/meitian/p/5030978.html 手机用数据">
+<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/626983/201512/626983-20151208205701574-332125502.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
@@ -18,11 +124,666 @@
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
-</script><link rel=canonical href="http://yoursite.com/2016/05/14/页面调试经验总结/"><title>页面调试经验总结 | treasureling个人博客</title></head><body itemscope itemtype=http://schema.org/WebPage lang=zh-Hans><div class="container sidebar-position-left page-post-detail"><div class=headband></div><header id=header class=header itemscope itemtype=http://schema.org/WPHeader><div class=header-inner><div class=site-brand-wrapper><div class=site-meta><div class=custom-logo-site-title><a href="/" class=brand rel=start><span class=logo-line-before><i></i></span> <span class=site-title>treasureling个人博客</span> <span class=logo-line-after><i></i></span></a></div><p class=site-subtitle></p></div><div class=site-nav-toggle><button><span class=btn-bar></span> <span class=btn-bar></span> <span class=btn-bar></span></button></div></div><nav class=site-nav><ul id=menu class=menu><li class="menu-item menu-item-home"><a href="/" rel=section><i class="menu-item-icon fa fa-fw fa-home"></i><br>首页</a></li><li class="menu-item menu-item-categories"><a href=/categories rel=section><i class="menu-item-icon fa fa-fw fa-th"></i><br>分类</a></li><li class="menu-item menu-item-about"><a href=/about rel=section><i class="menu-item-icon fa fa-fw fa-user"></i><br>关于</a></li><li class="menu-item menu-item-archives"><a href=/archives rel=section><i class="menu-item-icon fa fa-fw fa-archive"></i><br>归档</a></li><li class="menu-item menu-item-tags"><a href=/tags rel=section><i class="menu-item-icon fa fa-fw fa-tags"></i><br>标签</a></li></ul></nav></div></header><main id=main class=main><div class=main-inner><div class=content-wrap><div id=content class=content><div id=posts class=posts-expand><article class="post post-type-categories" itemscope itemtype=http://schema.org/Article><link itemprop=mainEntityOfPage href="http://yoursite.com/2016/05/14/页面调试经验总结/"><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=name content=treasureling><meta itemprop=description><meta itemprop=image content=http://img06.tooopen.com/images/20170321/tooopen_sy_202648845187.jpg></span> <span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content=treasureling个人博客></span><header class=post-header><h1 class=post-title itemprop="name headline">页面调试经验总结</h1><div class=post-meta><span class=post-time><span class=post-meta-item-icon><i class="fa fa-calendar-o"></i></span> <span class=post-meta-item-text>发表于</span><time title=创建于 itemprop="dateCreated datePublished" datetime=2016-05-14T19:25:35+08:00>2016-05-14</time></span> <span class=post-category><span class=post-meta-divider>|</span> <span class=post-meta-item-icon><i class="fa fa-folder-o"></i></span> <span class=post-meta-item-text>分类于</span> <span itemprop=about itemscope itemtype=http://schema.org/Thing><a href="/categories/经验总结/" itemprop=url rel=index><span itemprop=name>经验总结</span></a></span></span> <span class=post-comments-count><span class=post-meta-divider>|</span> <span class=post-meta-item-icon><i class="fa fa-comment-o"></i></span> <a href=/2016/05/14/页面调试经验总结/#comments itemprop=discussionUrl><span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/05/14/页面调试经验总结/" itemprop=commentCount></span></a></span></div></header><div class=post-body itemprop=articleBody><h2 id=移动端真机调试><a href=#移动端真机调试 class=headerlink title=移动端真机调试></a>移动端真机调试</h2><h3 id=IOS-移动端-原生方法（Safari开发者工具）><a href=#IOS-移动端-原生方法（Safari开发者工具） class=headerlink title="IOS 移动端 原生方法（Safari开发者工具）"></a>IOS 移动端 原生方法（Safari开发者工具）</h3><ul><li>手机端：设置 → Safari → 高级 → Web 检查器 → 开。</li><li>mac端：Safari → 偏好设置 → 高级 → 在菜单栏中显示“开发”菜单</li></ul><h3 id=安卓移动端原生方法><a href=#安卓移动端原生方法 class=headerlink title=安卓移动端原生方法></a><a href=https://developer.chrome.com/devtools/docs/remote-debugging target=_blank rel=external>安卓移动端原生方法</a></h3><ul><li>首先确保手机上和PC机上装有最新版本的chrome浏览器。<a href=http://www.cnblogs.com/meitian/p/5030978.html target=_blank rel=external>http://www.cnblogs.com/meitian/p/5030978.html</a></li><li>手机用数据线连接到电脑上,手机上设置允许通过USB调试,即开发者模式</li><li>PC的chrome访问chrome://inspect（访问网址后在手机上会弹出一个确认弹框，点击确认即可，如果不确认的），如果连接成功，就会在chrome下显示出对应的手机的型号，如下图<br><img src=http://images2015.cnblogs.com/blog/626983/201512/626983-20151208205701574-332125502.png></li><li>在手机上的chrome浏览器内输入要查看页面元素的网址，比如www.baidu.com</li><li>此时PC上的chrome://inspect页面下会出现可以检查的页面</li><li>点击对应页签下的inspect，另弹出的chrome页面上可以用来调试操作了</li></ul><h3 id=代理工具调试方法><a href=#代理工具调试方法 class=headerlink title=代理工具调试方法></a>代理工具调试方法</h3><p>通过代理，这种其实就是移动设备上访问电脑可以访问的内容</p><ul><li>启动Charles或者 Fiddler代理抓包工具，查看有关请求和响应、做本地资源映射</li><li>本地启动服务，可以依靠工具或者自己用nodejs写一个</li><li>手机上设置好代理，保存</li><li>手机上打开网页即可在 Charles 中看到代理的请求</li></ul><h3 id=Weinre-布局调试><a href=#Weinre-布局调试 class=headerlink title="Weinre 布局调试"></a><a>Weinre</a> 布局调试</h3><p>Weinre 是一个相当简单好用的调试工具。它会在你本地创建一个监听服务器，并提供一个 JavaScript，你只需要在需要测试的页面中加载这段 JS，就可以被 Weinre 监听到，在 Inspect 面板中调试你这个页面。</p><ul><li>npm install -g weinre</li><li>Mac 在终端执行 ipconfig getifaddr en0 命令/Win 在命令行执行 ipconfig 命令</li><li>根据上面命令拿到的ip比如10.189.249.254 终端执行weinre –boundHost 10.189.249.254</li><li>这时提供了有一个网址，浏览器打开。提供了一个Target Script。</li><li>我们需要把这个 JS 放到我们要调试的页面中，这样访问页面的时候，加载这个 JS，就会被 Weinre 监听到进行控制。</li></ul><p>缺点：没有JavaScript debug,可以调试布局问题<br>优点：浏览器兼容性强</p><h3 id=spy-debugger工具，抓包-调试><a href=#spy-debugger工具，抓包-调试 class=headerlink title="spy-debugger工具，抓包+ 调试"></a><a href=https://github.com/wuchangming/spy-debugger target=_blank rel=external>spy-debugger</a>工具，抓包+ 调试</h3><p>weinre升级版。一站式页面调试、抓包工具。远程调试任何手机浏览器页面，任何手机移动端webview（如：微信，HybirdApp等）。支持HTTP/HTTPS，无需USB连接设备。内部集成了weinre、node-mitmproxy、AnyProxy</p><ul><li>npm install spy-debugger -g</li><li>手机和PC保持在同一网络下</li><li>命令行输入spy-debugger，按命令行提示用浏览器打开相应地址</li><li>设置手机的HTTP代理，代理IP地址设置为PC的IP地址，端口为spy-debugger的启动端口(默认端口：9888)。</li><li>手机安装证书。注：手机必须先设置完代理后再通过(非微信)手机浏览器访问<a href=http://s.xxx(地址二维码)安装证书（手机首次调试需要安装证书，已安装了证书的手机无需重复安装 target=_blank rel=external>http://s.xxx(地址二维码)安装证书（手机首次调试需要安装证书，已安装了证书的手机无需重复安装</a>)</li><li>用手机浏览器访问你要调试的页面即可。</li></ul><h2 id=移动端虚拟机调试><a href=#移动端虚拟机调试 class=headerlink title=移动端虚拟机调试></a>移动端虚拟机调试</h2><h3 id=ios下调试><a href=#ios下调试 class=headerlink title=ios下调试></a>ios下调试</h3><p>使用 iOS Simulator 调试开发</p><ul><li>安装 Xcode 开发工具，如下图打开<br><img src=http://jiangshui.b0.upaiyun.com/blog/2014/12/mobile-test9.png></li><li>用模拟器里面的 Safari 打开需要调试的网页</li><li>如果需要调试，打开桌面版的 Safari，在“开发”中选择要调试的页面，即可打开 Safari 调试面板：</li></ul><h3 id=androd下调试><a href=#androd下调试 class=headerlink title=androd下调试></a>androd下调试</h3><ul><li><a href="https://www.genymotion.com/#!/" target=_blank rel=external>Genymotion</a></li><li><a href="https://www.parallels.com/cn/" target=_blank rel=external>parallels</a></li></ul><h2 id=移动设备在线测试><a href=#移动设备在线测试 class=headerlink title=移动设备在线测试></a>移动设备在线测试</h2><h3 id=BrowserStack><a href=#BrowserStack class=headerlink title=BrowserStack></a><a href="http://www.browserstack.com/" target=_blank rel=external>BrowserStack</a></h3><h3 id=Keynote><a href=#Keynote class=headerlink title=Keynote></a><a href="http://www.keynote.com/" target=_blank rel=external>Keynote</a></h3></div><div></div><div></div><div></div><footer class=post-footer><div class=post-nav><div class="post-nav-next post-nav-item"><a href="/2017/04/15/socket小结/" rel=next title=socket小结><i class="fa fa-chevron-left"></i> socket小结</a></div><span class=post-nav-divider></span><div class="post-nav-prev post-nav-item"><a href="/2016/03/15/http协议小结/" rel=prev title=http协议小结>http协议小结 <i class="fa fa-chevron-right"></i></a></div></div></footer></article><div class=post-spread></div></div></div><div class=comments id=comments><div id=disqus_thread><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div></div></div><div class=sidebar-toggle><div class=sidebar-toggle-line-wrap><span class="sidebar-toggle-line sidebar-toggle-line-first"></span> <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span> <span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id=sidebar class=sidebar><div class=sidebar-inner><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target=post-toc-wrap>文章目录</li><li class=sidebar-nav-overview data-target=site-overview>站点概览</li></ul><section class="site-overview sidebar-panel"><div class="site-author motion-element" itemprop=author itemscope itemtype=http://schema.org/Person><img class=site-author-image itemprop=image src=http://img06.tooopen.com/images/20170321/tooopen_sy_202648845187.jpg alt=treasureling><p class=site-author-name itemprop=name>treasureling</p><p class="site-description motion-element" itemprop=description></p></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"><a href=/archives><span class=site-state-item-count>7</span> <span class=site-state-item-name>日志</span></a></div><div class="site-state-item site-state-categories"><a href=/categories/index.html><span class=site-state-item-count>5</span> <span class=site-state-item-name>分类</span></a></div></nav><div class="links-of-author motion-element"><span class=links-of-author-item><a href=https://github.com/treasureling target=_blank title=GitHub><i class="fa fa-fw fa-github"></i> GitHub</a></span> <span class=links-of-author-item><a href=http://weibo.com/your-user-name target=_blank title=微博><i class="fa fa-fw fa-globe"></i> 微博</a></span> <span class=links-of-author-item><a href=http://www.zhihu.com/people/your-user-name target=_blank title=知乎><i class="fa fa-fw fa-globe"></i> 知乎</a></span></div></section><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class=post-toc><div class=post-toc-content><ol class=nav><li class="nav-item nav-level-2"><a class=nav-link href=#移动端真机调试><span class=nav-number>1.</span> <span class=nav-text>移动端真机调试</span></a><ol class=nav-child><li class="nav-item nav-level-3"><a class=nav-link href=#IOS-移动端-原生方法（Safari开发者工具）><span class=nav-number>1.1.</span> <span class=nav-text>IOS 移动端 原生方法（Safari开发者工具）</span></a></li><li class="nav-item nav-level-3"><a class=nav-link href=#安卓移动端原生方法><span class=nav-number>1.2.</span> <span class=nav-text>安卓移动端原生方法</span></a></li><li class="nav-item nav-level-3"><a class=nav-link href=#代理工具调试方法><span class=nav-number>1.3.</span> <span class=nav-text>代理工具调试方法</span></a></li><li class="nav-item nav-level-3"><a class=nav-link href=#Weinre-布局调试><span class=nav-number>1.4.</span> <span class=nav-text>Weinre 布局调试</span></a></li><li class="nav-item nav-level-3"><a class=nav-link href=#spy-debugger工具，抓包-调试><span class=nav-number>1.5.</span> <span class=nav-text>spy-debugger工具，抓包+ 调试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class=nav-link href=#移动端虚拟机调试><span class=nav-number>2.</span> <span class=nav-text>移动端虚拟机调试</span></a><ol class=nav-child><li class="nav-item nav-level-3"><a class=nav-link href=#ios下调试><span class=nav-number>2.1.</span> <span class=nav-text>ios下调试</span></a></li><li class="nav-item nav-level-3"><a class=nav-link href=#androd下调试><span class=nav-number>2.2.</span> <span class=nav-text>androd下调试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class=nav-link href=#移动设备在线测试><span class=nav-number>3.</span> <span class=nav-text>移动设备在线测试</span></a><ol class=nav-child><li class="nav-item nav-level-3"><a class=nav-link href=#BrowserStack><span class=nav-number>3.1.</span> <span class=nav-text>BrowserStack</span></a></li><li class="nav-item nav-level-3"><a class=nav-link href=#Keynote><span class=nav-number>3.2.</span> <span class=nav-text>Keynote</span></a></li></ol></li></ol></div></div></section></div></aside></div></main><footer id=footer class=footer><div class=footer-inner><div class=copyright>&copy; <span itemprop=copyrightYear>2017</span> <span class=with-love><i class="fa fa-heart"></i></span> <span class=author itemprop=copyrightHolder>treasureling</span></div><div class=powered-by>由 <a class=theme-link href=https://hexo.io>Hexo</a> 强力驱动</div><div class=theme-info>主题 - <a class=theme-link href=https://github.com/iissnan/hexo-theme-next>NexT.Pisces</a></div></div></footer><div class=back-to-top><i class="fa fa-arrow-up"></i></div></div><script type=text/javascript>
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/05/14/页面调试经验总结/"/>
+
+
+
+
+
+  <title> 页面调试经验总结 | treasureling个人博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">treasureling个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-categories " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/14/页面调试经验总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="treasureling">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://img06.tooopen.com/images/20170321/tooopen_sy_202648845187.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="treasureling个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                页面调试经验总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-14T19:25:35+08:00">
+                2016-05-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/经验总结/" itemprop="url" rel="index">
+                    <span itemprop="name">经验总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/05/14/页面调试经验总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/05/14/页面调试经验总结/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="移动端真机调试"><a href="#移动端真机调试" class="headerlink" title="移动端真机调试"></a>移动端真机调试</h2><h3 id="IOS-移动端-原生方法（Safari开发者工具）"><a href="#IOS-移动端-原生方法（Safari开发者工具）" class="headerlink" title="IOS 移动端 原生方法（Safari开发者工具）"></a>IOS 移动端 原生方法（Safari开发者工具）</h3><ul>
+<li>手机端：设置 → Safari → 高级 → Web 检查器 → 开。</li>
+<li>mac端：Safari → 偏好设置 → 高级 → 在菜单栏中显示“开发”菜单</li>
+</ul>
+<h3 id="安卓移动端原生方法"><a href="#安卓移动端原生方法" class="headerlink" title="安卓移动端原生方法"></a><a href="https://developer.chrome.com/devtools/docs/remote-debugging" target="_blank" rel="external">安卓移动端原生方法</a></h3><ul>
+<li>首先确保手机上和PC机上装有最新版本的chrome浏览器。<a href="http://www.cnblogs.com/meitian/p/5030978.html" target="_blank" rel="external">http://www.cnblogs.com/meitian/p/5030978.html</a></li>
+<li>手机用数据线连接到电脑上,手机上设置允许通过USB调试,即开发者模式</li>
+<li>PC的chrome访问chrome://inspect（访问网址后在手机上会弹出一个确认弹框，点击确认即可，如果不确认的），如果连接成功，就会在chrome下显示出对应的手机的型号，如下图<br><img src="http://images2015.cnblogs.com/blog/626983/201512/626983-20151208205701574-332125502.png" alt=""></li>
+<li>在手机上的chrome浏览器内输入要查看页面元素的网址，比如www.baidu.com</li>
+<li>此时PC上的chrome://inspect页面下会出现可以检查的页面</li>
+<li>点击对应页签下的inspect，另弹出的chrome页面上可以用来调试操作了</li>
+</ul>
+<h3 id="代理工具调试方法"><a href="#代理工具调试方法" class="headerlink" title="代理工具调试方法"></a>代理工具调试方法</h3><p> 通过代理，这种其实就是移动设备上访问电脑可以访问的内容</p>
+<ul>
+<li>启动Charles或者 Fiddler代理抓包工具，查看有关请求和响应、做本地资源映射</li>
+<li>本地启动服务，可以依靠工具或者自己用nodejs写一个</li>
+<li>手机上设置好代理，保存</li>
+<li>手机上打开网页即可在 Charles 中看到代理的请求</li>
+</ul>
+<h3 id="Weinre-布局调试"><a href="#Weinre-布局调试" class="headerlink" title="Weinre 布局调试"></a><a href="">Weinre</a> 布局调试</h3><p> Weinre 是一个相当简单好用的调试工具。它会在你本地创建一个监听服务器，并提供一个 JavaScript，你只需要在需要测试的页面中加载这段 JS，就可以被 Weinre 监听到，在 Inspect 面板中调试你这个页面。</p>
+<ul>
+<li>npm install -g weinre</li>
+<li>Mac 在终端执行 ipconfig getifaddr en0 命令/Win 在命令行执行 ipconfig 命令</li>
+<li>根据上面命令拿到的ip比如10.189.249.254 终端执行weinre –boundHost 10.189.249.254</li>
+<li>这时提供了有一个网址，浏览器打开。提供了一个Target Script。</li>
+<li>我们需要把这个 JS 放到我们要调试的页面中，这样访问页面的时候，加载这个 JS，就会被 Weinre 监听到进行控制。</li>
+</ul>
+<p>缺点：没有JavaScript debug,可以调试布局问题<br>优点：浏览器兼容性强</p>
+<h3 id="spy-debugger工具，抓包-调试"><a href="#spy-debugger工具，抓包-调试" class="headerlink" title="spy-debugger工具，抓包+ 调试"></a><a href="https://github.com/wuchangming/spy-debugger" target="_blank" rel="external">spy-debugger</a>工具，抓包+ 调试</h3><p> weinre升级版。一站式页面调试、抓包工具。远程调试任何手机浏览器页面，任何手机移动端webview（如：微信，HybirdApp等）。支持HTTP/HTTPS，无需USB连接设备。内部集成了weinre、node-mitmproxy、AnyProxy</p>
+<ul>
+<li>npm install spy-debugger -g</li>
+<li>手机和PC保持在同一网络下</li>
+<li>命令行输入spy-debugger，按命令行提示用浏览器打开相应地址</li>
+<li>设置手机的HTTP代理，代理IP地址设置为PC的IP地址，端口为spy-debugger的启动端口(默认端口：9888)。</li>
+<li>手机安装证书。注：手机必须先设置完代理后再通过(非微信)手机浏览器访问<a href="http://s.xxx(地址二维码)安装证书（手机首次调试需要安装证书，已安装了证书的手机无需重复安装" target="_blank" rel="external">http://s.xxx(地址二维码)安装证书（手机首次调试需要安装证书，已安装了证书的手机无需重复安装</a>)</li>
+<li>用手机浏览器访问你要调试的页面即可。</li>
+</ul>
+<h2 id="移动端虚拟机调试"><a href="#移动端虚拟机调试" class="headerlink" title="移动端虚拟机调试"></a>移动端虚拟机调试</h2><h3 id="ios下调试"><a href="#ios下调试" class="headerlink" title="ios下调试"></a>ios下调试</h3><p> 使用 iOS Simulator 调试开发</p>
+<ul>
+<li>安装 Xcode 开发工具，如下图打开<br><img src="http://jiangshui.b0.upaiyun.com/blog/2014/12/mobile-test9.png" alt=""></li>
+<li>用模拟器里面的 Safari 打开需要调试的网页</li>
+<li>如果需要调试，打开桌面版的 Safari，在“开发”中选择要调试的页面，即可打开 Safari 调试面板：</li>
+</ul>
+<h3 id="androd下调试"><a href="#androd下调试" class="headerlink" title="androd下调试"></a>androd下调试</h3><ul>
+<li><a href="https://www.genymotion.com/#!/" target="_blank" rel="external">Genymotion</a></li>
+<li><a href="https://www.parallels.com/cn/" target="_blank" rel="external">parallels</a></li>
+</ul>
+<h2 id="移动设备在线测试"><a href="#移动设备在线测试" class="headerlink" title="移动设备在线测试"></a>移动设备在线测试</h2><h3 id="BrowserStack"><a href="#BrowserStack" class="headerlink" title="BrowserStack"></a><a href="http://www.browserstack.com/" target="_blank" rel="external">BrowserStack</a></h3><h3 id="Keynote"><a href="#Keynote" class="headerlink" title="Keynote"></a><a href="http://www.keynote.com/" target="_blank" rel="external">Keynote</a></h3>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/06/http协议小结/" rel="next" title="http协议小结">
+                <i class="fa fa-chevron-left"></i> http协议小结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/02/17/性能优化要点/" rel="prev" title="性能优化要点">
+                性能优化要点 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://img06.tooopen.com/images/20170321/tooopen_sy_202648845187.jpg"
+               alt="treasureling" />
+          <p class="site-author-name" itemprop="name">treasureling</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/treasureling" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/your-user-name" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/your-user-name" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#移动端真机调试"><span class="nav-number">1.</span> <span class="nav-text">移动端真机调试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IOS-移动端-原生方法（Safari开发者工具）"><span class="nav-number">1.1.</span> <span class="nav-text">IOS 移动端 原生方法（Safari开发者工具）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安卓移动端原生方法"><span class="nav-number">1.2.</span> <span class="nav-text">安卓移动端原生方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代理工具调试方法"><span class="nav-number">1.3.</span> <span class="nav-text">代理工具调试方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Weinre-布局调试"><span class="nav-number">1.4.</span> <span class="nav-text">Weinre 布局调试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spy-debugger工具，抓包-调试"><span class="nav-number">1.5.</span> <span class="nav-text">spy-debugger工具，抓包+ 调试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移动端虚拟机调试"><span class="nav-number">2.</span> <span class="nav-text">移动端虚拟机调试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ios下调试"><span class="nav-number">2.1.</span> <span class="nav-text">ios下调试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#androd下调试"><span class="nav-number">2.2.</span> <span class="nav-text">androd下调试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移动设备在线测试"><span class="nav-number">3.</span> <span class="nav-text">移动设备在线测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BrowserStack"><span class="nav-number">3.1.</span> <span class="nav-text">BrowserStack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Keynote"><span class="nav-number">3.2.</span> <span class="nav-text">Keynote</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">treasureling</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
-</script><script type=text/javascript src="/lib/jquery/index.js?v=2.1.3"></script><script type=text/javascript src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script><script type=text/javascript src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script><script type=text/javascript src="/lib/velocity/velocity.min.js?v=1.2.1"></script><script type=text/javascript src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script><script type=text/javascript src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script><script type=text/javascript src=/lib/canvas-nest/canvas-nest.min.js></script><script type=text/javascript src=/lib/canvas-ribbon/canvas-ribbon.js></script><script type=text/javascript src="/js/src/utils.js?v=5.1.0"></script><script type=text/javascript src="/js/src/motion.js?v=5.1.0"></script><script type=text/javascript src="/js/src/affix.js?v=5.1.0"></script><script type=text/javascript src="/js/src/schemes/pisces.js?v=5.1.0"></script><script type=text/javascript src="/js/src/scrollspy.js?v=5.1.0"></script><script type=text/javascript src="/js/src/post-details.js?v=5.1.0"></script><script type=text/javascript src="/js/src/bootstrap.js?v=5.1.0"></script><script id=dsq-count-scr src=https://.disqus.com/count.js async></script><script type=text/javascript>
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
         var disqus_config = function () {
           this.page.url = 'http://yoursite.com/2016/05/14/页面调试经验总结/';
           this.page.identifier = '2016/05/14/页面调试经验总结/';
@@ -32,4 +793,54 @@
         s.src = 'https://.disqus.com/embed.js';
         s.setAttribute('data-timestamp', '' + +new Date());
         (d.head || d.body).appendChild(s);
-      </script></body></html>
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
